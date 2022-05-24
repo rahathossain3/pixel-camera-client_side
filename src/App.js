@@ -1,9 +1,9 @@
-import logo from './logo.svg';
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
 import Home from './Page/Home/Home';
 import Navbar from './Page/Shared/Navbar/Navbar';
 import MyPortfolio from './Page/MyPortfolio/MyPortfolio';
+import NotFound from './Page/Shared/NotFound/NotFound';
 
 function App() {
   return (
@@ -16,6 +16,8 @@ function App() {
         <Route path='/blog' element={<MyPortfolio />}></Route>
         <Route path='/portfolio' element={<MyPortfolio />}></Route>
 
+
+        <Route path='*' element={<NotFound />}></Route>
       </Routes>
     </div>
   );

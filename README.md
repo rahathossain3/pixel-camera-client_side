@@ -19,3 +19,6 @@
 * react query
 * react tailwind
 * daisy UI
+
+## feature in website
+* responsive desktop (1200px) & mobile (max-width: 768px)
