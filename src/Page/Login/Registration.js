@@ -54,7 +54,7 @@ const Registration = () => {
 
 
     return (
-        <div className='flex  justify-center items-center'>
+        <div className='flex  justify-center items-center  pb-14'>
             <div className="card w-96 bg-base-100 shadow-xl">
                 <div className="card-body">
                     <h2 className="text-center text-2xl font-bold">Registration</h2>

@@ -1,15 +1,18 @@
+import { signOut } from 'firebase/auth';
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../../../Image/New Project.png'
+import logo from '../../../Image/New Project.png';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../../firebase.init';
+
 
 const Navbar = () => {
 
+    const [user] = useAuthState(auth);
 
-    // const logout = () => {
-    //     signOut(auth);
-    //     // for remove jwt
-    //     localStorage.removeItem('accessToken');
-    // };
+    const logout = () => {
+        signOut(auth);
+    };
 
     //menu items
     const menuItems = <>
@@ -19,13 +22,17 @@ const Navbar = () => {
         <li className='hover:text-orange-600'><Link to="/blog">Blogs</Link></li>
         <li className='hover:text-orange-600'><Link to="/portfolio">Portfolio</Link></li>
         <li className='hover:text-orange-600'><Link to="/dashboard">Dashboard</Link></li>
-        <li className='hover:text-orange-600'><Link to="/login">Login</Link></li>
+        {/* <li className='hover:text-orange-600'><Link to="/login">Login</Link></li> */}
 
         {/* {
             user && <li><Link to="/dashboard">Dashboard</Link></li>
         } */}
 
-        {/* <li> {user ? <button onClick={logout} className="btn btn-ghost">Sign out</button> : <Link to="/login">Login</Link>}</li> */}
+        <li> {user ?
+            <button onClick={logout} className="btn btn-ghost hover:text-orange-600">Sign out</button>
+            :
+            <Link className='hover:text-orange-600' to="/login">Login</Link>}
+        </li>
     </>
 
 

@@ -7,6 +7,7 @@ import NotFound from './Page/Shared/NotFound/NotFound';
 import Login from './Page/Login/Login';
 import Registration from './Page/Login/Registration';
 import Blogs from './Page/Blogs/Blogs';
+import Footer from './Page/Shared/Footer/Footer';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
 
         <Route path='*' element={<NotFound />}></Route>
       </Routes>
+      <Footer></Footer>
     </div>
   );
 }
