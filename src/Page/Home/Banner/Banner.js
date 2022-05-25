@@ -7,7 +7,7 @@ const Banner = () => {
         <div className="hero bg-image min-h-screen bg-opacity-5">
             <div className="hero-content flex-col lg:flex-row-reverse">
                 <img src='https://i.ibb.co/H4b40vr/banner.png' className="max-w-sm rounded-lg shadow-2xl" />
-                <div className='sm:text-center md:text-center'>
+                <div className='text-center md:text-center'>
                     <h1 className="text-6xl text-gray font-bold pb-5"> Welcome</h1>
                     <h1 className="text-5xl text-amber-600 font-bold"> Pixel Camera </h1>
                     <h3 className="py-6 text-xl p-5 text-justify">Pixel is a camera Manufacturer industries.
