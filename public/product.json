@@ -1,0 +1,32 @@
+[
+    {
+      "_id": "628e51e7527d43b4763f64ed",
+      "name": "Debbie Stout",
+      "picture": "http://placehold.it/32x32",
+      "details": "Elaine England",
+      "minimumQnt": 38,
+      "availableQnt": 20,
+      "unitPrice": 29,
+      "email": "elaineengland@insurety.com"
+    },
+    {
+      "_id": "628e51e76b2efc4b7296be1b",
+      "name": "Miller Conway",
+      "picture": "http://placehold.it/32x32",
+      "details": "Cohen Sloan",
+      "minimumQnt": 39,
+      "availableQnt": 27,
+      "unitPrice": 20,
+      "email": "cohensloan@insurety.com"
+    },
+    {
+      "_id": "628e51e7a6e9d0f068da4326",
+      "name": "Hart Mathis",
+      "picture": "http://placehold.it/32x32",
+      "details": "Osborne Barr",
+      "minimumQnt": 20,
+      "availableQnt": 28,
+      "unitPrice": 32,
+      "email": "osbornebarr@insurety.com"
+    }
+  ]
