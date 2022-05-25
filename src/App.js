@@ -5,6 +5,7 @@ import Navbar from './Page/Shared/Navbar/Navbar';
 import MyPortfolio from './Page/MyPortfolio/MyPortfolio';
 import NotFound from './Page/Shared/NotFound/NotFound';
 import Login from './Page/Login/Login';
+import Registration from './Page/Login/Registration';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path='/blog' element={<MyPortfolio />}></Route>
         <Route path='/portfolio' element={<MyPortfolio />}></Route>
         <Route path='/login' element={<Login />}></Route>
+        <Route path='/registration' element={<Registration />}></Route>
 
 
         <Route path='*' element={<NotFound />}></Route>
