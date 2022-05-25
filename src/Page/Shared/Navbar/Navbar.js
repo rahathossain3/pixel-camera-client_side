@@ -14,12 +14,12 @@ const Navbar = () => {
     //menu items
     const menuItems = <>
         <li className='hover:text-orange-600'><Link to="/">Home</Link></li>
-        <li className='hover:text-orange-600'><Link to="/appointment">Products</Link></li>
+        <li className='hover:text-orange-600'><Link to="/products">Products</Link></li>
         <li className='hover:text-orange-600'><Link to="/review">Reviews</Link></li>
         <li className='hover:text-orange-600'><Link to="/blog">Blogs</Link></li>
         <li className='hover:text-orange-600'><Link to="/portfolio">Portfolio</Link></li>
-        <li className='hover:text-orange-600'><Link to="/portfolio">Dashboard</Link></li>
-        <li className='hover:text-orange-600'><Link to="/portfolio">Login</Link></li>
+        <li className='hover:text-orange-600'><Link to="/dashboard">Dashboard</Link></li>
+        <li className='hover:text-orange-600'><Link to="/login">Login</Link></li>
 
         {/* {
             user && <li><Link to="/dashboard">Dashboard</Link></li>
