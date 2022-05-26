@@ -29,9 +29,9 @@ const Navbar = () => {
         } */}
 
         <li> {user ?
-            <button onClick={logout} className="btn btn-ghost hover:text-orange-600">Sign out</button>
+            <button onClick={logout} className="btn btn-ghost hover:text-orange-600 mr-3 font-bold">Sign out</button>
             :
-            <Link className='hover:text-orange-600' to="/login">Login</Link>}
+            <Link className='hover:text-orange-600 mr-3 font-bold' to="/login">Login</Link>}
         </li>
     </>
 
@@ -48,8 +48,8 @@ const Navbar = () => {
                         {menuItems}
                     </ul>
                 </div>
-                <a className="btn btn-ghost normal-case text-2xl font-bold text-secondary hover:bg-sky-200 hover:text-orange-600">
-                    <img className='w-7 pr-2' src={logo} alt="" /> Pixel Camera</a>
+                <Link to='/home' className="btn btn-ghost normal-case text-2xl font-bold text-secondary hover:bg-sky-200 hover:text-orange-600">
+                    <img className='w-7 pr-2' src={logo} alt="" /> Pixel Camera</Link>
             </div>
 
 
