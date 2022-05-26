@@ -1,32 +1,47 @@
 [
-    {
-      "_id": "628e51e7527d43b4763f64ed",
-      "name": "Debbie Stout",
-      "picture": "http://placehold.it/32x32",
-      "details": "Elaine England",
-      "minimumQnt": 38,
-      "availableQnt": 20,
-      "unitPrice": 29,
-      "email": "elaineengland@insurety.com"
-    },
-    {
-      "_id": "628e51e76b2efc4b7296be1b",
-      "name": "Miller Conway",
-      "picture": "http://placehold.it/32x32",
-      "details": "Cohen Sloan",
-      "minimumQnt": 39,
-      "availableQnt": 27,
-      "unitPrice": 20,
-      "email": "cohensloan@insurety.com"
-    },
-    {
-      "_id": "628e51e7a6e9d0f068da4326",
-      "name": "Hart Mathis",
-      "picture": "http://placehold.it/32x32",
-      "details": "Osborne Barr",
-      "minimumQnt": 20,
-      "availableQnt": 28,
-      "unitPrice": 32,
-      "email": "osbornebarr@insurety.com"
-    }
-  ]
+  {
+    "name": "Pixel EF-S 18-55mm f/3.5-5.6 IS STM Lens",
+    "picture": "  https: //i.ibb.co/pnWFm1T/4000d-1-500x500.jpg",
+    "details": "An affordable standard zoom lens suited to a variety of subjects. Enjoy smooth, near-silent focusing when shooting video, with STM motor technology and Movie Servo AF. A four-stop Image Stabilizer reduces camera shake. Tackle a range of subjects, from landscapes to portraits and action, with a versatile 18-55mm zoom range. ",
+    "minimumQnt": 100,
+    "availableQnt": 20000,
+    "unitPrice": 100,
+    "email": "rahathossain210@gmail.com"
+  },
+  {
+    "name": "Canon EF 50mm f/1.8 STM Lens",
+    "picture": "https: //i.ibb.co/7zk6W7s/ef-50mm-500x500.jpg",
+    "details": "Compact, lightweight fixed focal length lens ideal for everyday photos, and with a large f/1.8 aperture, a perfect lens for low-light photography and creative background blur. 80mm effective focal-length when attached to an APS-C camera, optimal for portraits and photos of fast moving subjects such as children and pets.",
+    "minimumQnt": 100,
+    "availableQnt": 20000,
+    "unitPrice": 100,
+    "email": "rahathossain210@gmail.com"
+  },
+  {
+    "name": "Canon EF-S 24mm f/2.8 STM Lens",
+    "picture": "https: //i.ibb.co/hyjwDDx/ef-s-18-55mm-is-stm-500x500.jpg",
+    "details": "Canon EF-S 24mm f/2.8 STM Lens is built in a optical design features one aspherical element, which helps to reduce distortion and spherical aberrations for high sharpness and clarity. This lens is stands in 24mm (35mm Equivalent Focal Length: 38.4mm) Focal Length, f/2.8 Maximum Aperture and f/22 Minimum Aperture. It is APS-C Format Compatibility. ",
+    "minimumQnt": 100,
+    "availableQnt": 20000,
+    "unitPrice": 100,
+    "email": "rahathossain210@gmail.com"
+  },
+  {
+    "name": "Canon Eos 4000D 18MP 2.7inch Display With 18-55mm Lens Dslr Camera",
+    "picture": "https://i.ibb.co/hWWYB89/ef-s-24mm-1-500x500.jpg",
+    "details": "Tell distinctive stories with your photography. This beginner’s DSLR with EF-S 18-55mm f/3.5-5.6 III Lens intuitively creates stand-out photos and Full HD movies full of colour and detail – offering partial and full manual photographic control. The 18 Megapixel APS-C sensor allows you to shoot in low light, expressing your creativity with interchangeable lenses. Point and shoot with Scene Intelligent Auto and share your stories using the EOS 4000D’s Wi-Fi with the and Camera Connect app.",
+    "minimumQnt": 100,
+    "availableQnt": 2000,
+    "unitPrice": 100,
+    "email": "rahathossain210@gmail.com"
+  },
+  {
+    "name": "USB Cable for Canon Camera",
+    "picture": "https://i.ibb.co/kXtMxpb/giant-98028.jpg",
+    "details": "Compatible with Canon powershot ELPH 360 HS / 190 IS / 180 / 530 / 520 / 510 / 500 / 350 / 340 / 330 / 320 / 310 / 300 / 110 / 100 HS / ELPH 170 / 160 / 150 / 140 / 135 / 130 / 115 IS / A4000 IS / A3500 IS / A3400 IS / A3300 IS / A2600 / A2500 A2400 IS and many others.",
+    "minimumQnt": 1000,
+    "availableQnt": 200000,
+    "unitPrice": 10,
+    "email": "rahathossain210@gmail.com"
+  }
+]
