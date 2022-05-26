@@ -1,10 +1,11 @@
-import React, { useEffect } from 'react';
-import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import React, { useEffect, useRef } from 'react';
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init.js';
 //react hook from
 import { useForm } from "react-hook-form";
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Loading from '../Shared/Loading/Loading';
+import { toast } from 'react-toastify';
 
 const Login = () => {
     //google signing
@@ -20,6 +21,13 @@ const Login = () => {
         loading,
         error,
     ] = useSignInWithEmailAndPassword(auth);
+
+    // for reset password
+    const [
+        sendPasswordResetEmail,
+        sending
+    ] = useSendPasswordResetEmail(auth);
+    const emailRef = useRef('');
 
     // for error
     let signInError;
@@ -54,6 +62,20 @@ const Login = () => {
         signInWithEmailAndPassword(data.email, data.password)
     }
 
+    // for password send
+
+    const handlePassReset = async (e) => {
+        const email = emailRef.current.value;
+        console.log(email)
+        if (email) {
+            await sendPasswordResetEmail(email);
+            toast('Send Reset Link');
+        }
+        else {
+            toast('Please enter Your Email')
+        }
+    }
+
     return (
         <div className='flex justify-center items-center pb-14'>
             <div className="card w-96 bg-base-100 shadow-xl">
@@ -72,6 +94,7 @@ const Login = () => {
 
                             {/* email field ------------------------------- */}
                             <input
+                                ref={emailRef}
                                 type="email"
                                 placeholder="Your Email Address"
                                 className="input input-bordered w-full max-w-xs"
@@ -138,6 +161,12 @@ const Login = () => {
                         {/* submit btn ------------- */}
                         <input className='btn w-full max-w-xs text-white' type="submit" value="Login" />
                     </form>
+
+                    {/* reset password  */}
+                    <p onClick={handlePassReset} style={{ margin: '3px' }} className='btn btn-xs text-sm glass text-small'>
+                        <span className='text-orange-500'> Forgat Password  </span>
+                    </p>
+
                     {/* link registration  */}
                     <p><small>New to Pixel Camera's <Link className='text-primary' to="/registration">Create New Account</Link></small></p>
 
