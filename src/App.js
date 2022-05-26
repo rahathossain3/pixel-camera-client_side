@@ -8,6 +8,7 @@ import Login from './Page/Login/Login';
 import Registration from './Page/Login/Registration';
 import Blogs from './Page/Blogs/Blogs';
 import Footer from './Page/Shared/Footer/Footer';
+import Products from './Page/Products/Products';
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
         {/* open routs --- */}
         <Route path='/' element={<Home />}></Route>
         <Route path='/home' element={<Home />}></Route>
-        <Route path='/products' element={<Home />}></Route>
+        <Route path='/products' element={<Products />}></Route>
         <Route path='/review' element={<Home />}></Route>
         <Route path='/blog' element={<Blogs />}></Route>
         <Route path='/portfolio' element={<MyPortfolio />}></Route>
