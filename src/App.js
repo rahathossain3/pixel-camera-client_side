@@ -9,6 +9,8 @@ import Registration from './Page/Login/Registration';
 import Blogs from './Page/Blogs/Blogs';
 import Footer from './Page/Shared/Footer/Footer';
 import Products from './Page/Products/Products';
+import RequireAuth from './Page/Login/RequireAuth';
+import Dashboard from './Page/Dashboard/Dashboard';
 
 function App() {
   return (
@@ -24,6 +26,12 @@ function App() {
         <Route path='/portfolio' element={<MyPortfolio />}></Route>
         <Route path='/login' element={<Login />}></Route>
         <Route path='/registration' element={<Registration />}></Route>
+
+        <Route path='/dashboard' element={
+          <RequireAuth>
+            <Dashboard />
+          </RequireAuth>
+        }></Route>
 
 
         <Route path='*' element={<NotFound />}></Route>
