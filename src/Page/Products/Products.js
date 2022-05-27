@@ -12,7 +12,7 @@ const Products = () => {
             <hr />
 
 
-            <div className=' grid lg:grid-cols-3 sm:grid-cols-2 gap-4'>
+            <div className=' grid lg:grid-cols-3 sm:grid-cols-2 mb-14 gap-4'>
                 {
                     products.map(product => <Product
                         key={product._id}

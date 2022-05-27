@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Review = ({ review }) => {
-    console.log(review)
+    // console.log(review)
     const { _id, name, picture, comment, ratting, email } = review;
 
 
@@ -25,10 +25,10 @@ const Review = ({ review }) => {
                             }
                         </p>
 
-                        <div class="rating rating-md">
+                        <div className="rating rating-md">
                             <p className='font-bold text-orange-500 pr-3'>Ratting: </p>
                             <p className=' font-bold pr-2'> {ratting}</p>
-                            <input type="radio" name="rating-5" class="mask mask-star-2 bg-red-400" />
+                            <input type="radio" name="rating-5" className="mask mask-star-2 bg-red-400" />
                         </div>
                     </div>
                 </div>
