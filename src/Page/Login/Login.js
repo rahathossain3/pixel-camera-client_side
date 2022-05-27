@@ -41,7 +41,7 @@ const Login = () => {
     useEffect(() => {
         if (user || gUser) {
             navigate(from, { replace: true });
-            // console.log(user || gUser);
+            console.log(user || gUser);
         }
     }, [user, gUser, from, navigate])
 
@@ -66,7 +66,7 @@ const Login = () => {
 
     const handlePassReset = async (e) => {
         const email = emailRef.current.value;
-        console.log(email)
+        // console.log(email)
         if (email) {
             await sendPasswordResetEmail(email);
             toast('Send Reset Link');

@@ -35,7 +35,7 @@ const Product = ({ product }) => {
                     {minimumQnt} pice</p>
                 <p className='left-text' >
                     <span className='font-bold text-orange-600 pb-3'  >Price: </span>
-                    {unitPrice} <span className=' text-green-700 font-semibold text-sm'>(par pice)</span></p>
+                    {unitPrice} $ <span className=' text-green-700 font-semibold text-sm'>(par pice)</span></p>
 
 
                 <div className="card-actions justify-center pt-6 ">

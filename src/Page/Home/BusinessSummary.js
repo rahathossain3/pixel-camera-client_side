@@ -25,14 +25,14 @@ const BusinessSummary = () => {
                 <div className="stats stats-vertical justify-center flex lg:stats-horizontal info shadow">
 
                     <div className="stat bg-transparent place-items-center ">
-                        <div className="stat-title font-semibold">Orders</div>
-                        <div className="stat-value">30K</div>
+                        <div className="stat-title font-semibold">We serve </div>
+                        <div className="stat-value">3000K</div>
                         <div className="stat-desc text-success font-semibold">Jan 1st - Feb 1st</div>
                     </div>
 
                     <div className="stat  place-items-center ">
                         <div className="stat-title font-semibold">New Customers</div>
-                        <div className="stat-value">10,200</div>
+                        <div className="stat-value">102k</div>
                         <div className="stat-desc text-success font-semibold">↗︎ Join by online</div>
                     </div>
 
@@ -40,6 +40,12 @@ const BusinessSummary = () => {
                         <div className="stat-title font-semibold">Services</div>
                         <div className="stat-value">200 Countries</div>
                         <div className="stat-desc text-success font-semibold">Successfully delivery </div>
+                    </div>
+
+                    <div className="stat bg-transparent place-items-center">
+                        <div className="stat-title font-semibold">Review</div>
+                        <div className="stat-value">100M</div>
+                        <div className="stat-desc text-success font-semibold">Happy Customers </div>
                     </div>
                 </div>
 

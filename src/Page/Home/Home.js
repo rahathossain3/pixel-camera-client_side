@@ -4,6 +4,8 @@ import HomeProducts from './HomeProducts';
 import HomeReviews from './HomeReviews';
 import BusinessSummary from './BusinessSummary';
 import AddComment from './AddComment';
+import { Link } from 'react-router-dom';
+
 
 const Home = () => {
     return (
@@ -11,6 +13,11 @@ const Home = () => {
             <Banner />
 
             <HomeProducts></HomeProducts>
+
+            <div className='flex justify-end'>
+                <button className='btn btn-link hover:btn-outline btn-info font-bold text-2xl shadow-xl '><Link to='/products'>See More products</Link></button>
+
+            </div>
 
             <BusinessSummary></BusinessSummary>
 
