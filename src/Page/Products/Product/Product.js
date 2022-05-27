@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Product.css'
 
 const Product = ({ product }) => {
@@ -29,7 +30,8 @@ const Product = ({ product }) => {
 
 
                 <div className="card-actions justify-center pt-6 ">
-                    <button className="btn hover:btn-info btn-primary">Buy Now</button>
+                    <Link to='/purchase'> <button className="btn hover:btn-info btn-primary">
+                        Buy Now </button></Link>
                 </div>
             </div>
         </div>

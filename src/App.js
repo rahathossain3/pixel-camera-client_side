@@ -17,6 +17,7 @@ import MyProfile from './Page/Dashboard/MyProfile';
 import AllUsers from './Page/Dashboard/AllUsers';
 import AddProduct from './Page/Dashboard/AddProduct';
 import ManageProduct from './Page/Dashboard/ManageProduct';
+import Purchase from './Page/Products/Purchase';
 
 function App() {
   return (
@@ -48,8 +49,8 @@ function App() {
           <Route path='addProduct' element={<AddProduct />}></Route>
           <Route path='manageProduct' element={<ManageProduct />}></Route>
 
-
         </Route>
+        <Route path='/purchase' element={<RequireAuth> <Purchase /></RequireAuth>}></Route>
 
 
 

@@ -6,12 +6,12 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyDBYLhbhWd1kEE56se3a0THnpWYO7TgTA0",
-    authDomain: "pixel-camera-c8298.firebaseapp.com",
-    projectId: "pixel-camera-c8298",
-    storageBucket: "pixel-camera-c8298.appspot.com",
-    messagingSenderId: "864998059403",
-    appId: "1:864998059403:web:fa8c5ae30ea7121568138e"
+    apiKey: process.env.REACT_APP_API_KEY,
+    authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+    projectId: process.env.REACT_APP_PROJECT_ID,
+    storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+    messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
+    appId: process.env.REACT_APP_APP_ID,
 };
 
 // Initialize Firebase
