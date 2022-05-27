@@ -11,6 +11,12 @@ import Footer from './Page/Shared/Footer/Footer';
 import Products from './Page/Products/Products';
 import RequireAuth from './Page/Login/RequireAuth';
 import Dashboard from './Page/Dashboard/Dashboard';
+import Reviews from './Page/Reviews/Reviews';
+import MyOrders from './Page/Dashboard/MyOrders';
+import MyProfile from './Page/Dashboard/MyProfile';
+import AllUsers from './Page/Dashboard/AllUsers';
+import AddProduct from './Page/Dashboard/AddProduct';
+import ManageProduct from './Page/Dashboard/ManageProduct';
 
 function App() {
   return (
@@ -21,23 +27,36 @@ function App() {
         <Route path='/' element={<Home />}></Route>
         <Route path='/home' element={<Home />}></Route>
         <Route path='/products' element={<Products />}></Route>
-        <Route path='/review' element={<Home />}></Route>
+        <Route path='/review' element={<Reviews />}></Route>
         <Route path='/blog' element={<Blogs />}></Route>
         <Route path='/portfolio' element={<MyPortfolio />}></Route>
         <Route path='/login' element={<Login />}></Route>
         <Route path='/registration' element={<Registration />}></Route>
 
         <Route path='/dashboard' element={
-          <RequireAuth>
-            <Dashboard />
-          </RequireAuth>
+          // <RequireAuth>
+          <Dashboard />
+          // </RequireAuth>
         }></Route>
+
+        {/* nested route */}
+        <Route path='dashboard' element={<RequireAuth> <Dashboard />  </RequireAuth>}>
+          {/* 1st main route a index hoy, onno sob a path hobe */}
+          <Route index element={<MyOrders />}></Route>
+          <Route path='myProfile' element={<MyProfile />}></Route>
+          <Route path='users' element={<AllUsers />}></Route>
+          <Route path='addProduct' element={<AddProduct />}></Route>
+          <Route path='manageProduct' element={<ManageProduct />}></Route>
+
+
+        </Route>
+
 
 
         <Route path='*' element={<NotFound />}></Route>
       </Routes>
       <Footer></Footer>
-    </div>
+    </div >
   );
 }
 
