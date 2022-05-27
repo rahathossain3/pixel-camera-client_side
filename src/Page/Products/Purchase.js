@@ -29,20 +29,20 @@ const Purchase = () => {
 
     if (quantity >= minimumQnt && quantity <= availableQnt) {
 
-        buttonDisable = <button className="btn btn-primary w-3/5">Get Started</button>
+        buttonDisable = <button className="btn btn-primary w-3/5">Purchase</button>
         // console.log('ok');
     }
     else {
-        buttonDisable = <button disabled className="btn btn-primary w-3/5">Get Started</button>
+        buttonDisable = <button disabled className="btn btn-primary w-3/5">Purchase</button>
 
         if (quantity >= minimumQnt) {
-            quantityError = <span className='text-red-700 p-2 pb-5'> Please input Minimum Quantity or Larger then Minimum Quantity </span>
+            quantityError = <span className='text-red-700 p-2 pb-5 font-bold'> Please input Minimum Quantity or Larger then Minimum Quantity </span>
         }
         if (quantity >= availableQnt) {
-            quantityError = <span className='text-red-700 p-2 pb-5'> Please input Available Quantity or Low then Available Quantity </span>
+            quantityError = <span className='text-red-700 p-2 pb-5 font-bold'> Please input Available Quantity or Low then Available Quantity </span>
         }
         else {
-            quantityError = <span className='text-red-700 p-2 pb-5'> Please input Any Quantity of Product</span>
+            quantityError = <span className='text-red-700 p-2 pb-5 font-bold'> Please input Any Quantity of Product</span>
         }
 
 
@@ -90,7 +90,7 @@ const Purchase = () => {
                             <div className="pb-4">
                                 <label className="input-group-lg">
                                     <span className='font-bold pr-3'>Purchase Qnt :</span>
-                                    <input type="number" onChange={handleQuantity} name='purchaseQnt' placeholder="Purchase Quantity" className="text-xl bg-slate-200 input input-bordered w-full max-w-xs" />
+                                    <input type="number" onChange={handleQuantity} name='purchaseQnt' placeholder={`Purchase Quantity ${minimumQnt}`} className="text-xl bg-slate-200 input input-bordered w-full max-w-xs" />
                                 </label>
 
                             </div>
