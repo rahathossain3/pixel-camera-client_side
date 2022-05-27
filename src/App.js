@@ -50,7 +50,7 @@ function App() {
           <Route path='manageProduct' element={<ManageProduct />}></Route>
 
         </Route>
-        <Route path='/purchase' element={<RequireAuth> <Purchase /></RequireAuth>}></Route>
+        <Route path='/purchase/:itemId' element={<RequireAuth> <Purchase /></RequireAuth>}></Route>
 
 
 

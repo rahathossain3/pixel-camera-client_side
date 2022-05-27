@@ -1,10 +1,19 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './Product.css'
 
 const Product = ({ product }) => {
     // console.log(product)
     const { _id, name, img, details, minimumQnt, availableQnt, unitPrice, email } = product;
+
+    let navigate = useNavigate();
+
+    // for update stock page
+    const handleBuyItem = (id) => {
+        // console.log(id);
+        navigate(`/purchase/${id}`);
+    }
+
 
     return (
         <div className="card w-50 bg-base-100 shadow-xl">
@@ -30,8 +39,8 @@ const Product = ({ product }) => {
 
 
                 <div className="card-actions justify-center pt-6 ">
-                    <Link to='/purchase'> <button className="btn hover:btn-info btn-primary">
-                        Buy Now </button></Link>
+                    <button onClick={() => handleBuyItem(_id)} className="btn hover:btn-info btn-primary">
+                        Buy Now </button>
                 </div>
             </div>
         </div>
