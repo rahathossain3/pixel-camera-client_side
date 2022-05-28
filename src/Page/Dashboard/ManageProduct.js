@@ -20,15 +20,15 @@ const ManageProduct = () => {
     if (isLoading) {
         return <Loading />
     }
-    console.log(deletingProduct)
+    // console.log(deletingProduct)
     return (
         <div className='container text-center pt-4'>
 
 
             <hr />
-            <h2 className='text-5xl mb-4 text-center mt-3'>this is from manage Product</h2>
+            <h2 className='text-5xl mb-4 text-center mt-3'>Manage Products</h2>
 
-            <h2 className="text-2xl">Manage Doctor: {products.length}</h2>
+            <h2 className="text-2xl">Total Products is: {products.length}</h2>
 
             <div className="overflow-x-auto">
                 <table className="table w-full">

@@ -10,11 +10,11 @@ const AddProduct = () => {
 
     const [user] = useAuthState(auth)
 
-    const { register, handleSubmit } = useForm();
+    const { register, handleSubmit, reset } = useForm();
 
 
-    const onSubmit = data => {
-        console.log(data);
+    const onSubmit = async (data) => {
+        // console.log(data);
         const url = `http://localhost:5000/product`;
         fetch(url, {
             method: 'POST',
@@ -26,7 +26,7 @@ const AddProduct = () => {
             .then(res => res.json())
             .then(result => {
                 toast('Product Add successfully');
-
+                reset();
             })
     };
 

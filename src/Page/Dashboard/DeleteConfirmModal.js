@@ -3,16 +3,15 @@ import { toast } from 'react-toastify';
 
 const DeleteConfirmModal = ({ deletingProduct, refetch, setDeletingDoctor: setDeletingProduct }) => {
 
-    // const { name, email } = deletingProduct;
     const { _id, name, img, details, minimumQnt, availableQnt, unitPrice, email } = deletingProduct;
 
 
     const handleDelete = (id) => {
         fetch(`http://localhost:5000/product/${id}`, {
             method: 'DELETE',
-            // headers: {
-            //     authorization: `Bearer ${localStorage.getItem('accessToken')}`
-            // }
+            headers: {
+                authorization: `Bearer ${localStorage.getItem('accessToken')}`
+            }
         })
             .then(res => res.json())
             .then(data => {
@@ -29,8 +28,12 @@ const DeleteConfirmModal = ({ deletingProduct, refetch, setDeletingDoctor: setDe
             <input type="checkbox" id="delete-confirm-modal" className="modal-toggle" />
             <div className="modal modal-bottom sm:modal-middle">
                 <div className="modal-box">
-                    <h3 className="font-bold text-lg text-red-500">Are you sure you want to delete  ${name}!</h3>
-                    <p className="py-4">You've been selected for a chance to get one year of subscription to use Wikipedia for free!</p>
+                    <h3 className="font-bold text-lg text-red-500">Are you sure you want to delete
+
+                        <br /><span>{name}</span>!</h3>
+                    <p className="py-4">Your selected Product was delete. If you change your Mind , then say
+                        <span className='font-bold'> Cancel </span>. Thinking.......  </p>
+
                     <div className="modal-action">
                         <button onClick={() => handleDelete(_id)} className="btn btn-xs btn-error">Delete</button>
                         <label htmlFor="delete-confirm-modal" className="btn btn-xs btn-error bg-zinc-900 text-yellow-50 hover:text-black">Cancel</label>
