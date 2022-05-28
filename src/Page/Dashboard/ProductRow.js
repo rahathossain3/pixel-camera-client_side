@@ -27,7 +27,7 @@ const ProductRow = ({ product, index, refetch, setDeletingProduct }) => {
                 <span className=" text-md font-bold text-green-900 ">Available: </span>{availableQuality}
             </td>
 
-            <td>{unitPrice}</td>
+            <td>{unitPrice} $</td>
             <td>
                 <label onClick={() => setDeletingProduct(product)} htmlFor="delete-confirm-modal" className="btn btn-error btn-xs">Delete</label>
             </td>

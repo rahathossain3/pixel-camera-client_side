@@ -37,37 +37,36 @@ const Purchase = () => {
         const order = { ...product, bEmail }
 
         const id = _id;
-        const currentUser = order;
-        console.log(order);
-        console.log(currentUser);
+        // const currentUser = order;
+        // console.log(order);
+        // console.log(currentUser);
 
-        fetch(`http://localhost:5000/order/${id}`, {
+        /*        fetch(`http://localhost:5000/order/${id}`, {
+                   method: 'POST',
+                   headers: {
+                       'content-type': 'application/json'
+                   },
+                   body: JSON.stringify(currentUser)
+               })
+                   .then(res => res.json())
+                   .then(data => {
+                       console.log('data inside use token', data);
+                   })
+        */
+        // -------------------
+        const url = `http://localhost:5000/order`;
+        fetch(url, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
             },
-            body: JSON.stringify(currentUser)
+            body: JSON.stringify(order)
         })
             .then(res => res.json())
-            .then(data => {
-                console.log('data inside use token', data);
+            .then(result => {
+                navigate('/home');
+                toast('Product Add successfully');
             })
-
-        /*    // -------------------
-           const url = `http://localhost:5000/order`;
-           fetch(url, {
-               method: 'PUT',
-               headers: {
-                   'content-type': 'application/json'
-               },
-               body: JSON.stringify(order)
-           })
-               .then(res => res.json())
-               .then(result => {
-   
-                   navigate('/home');
-                   toast('Product Add successfully');
-               }) */
 
     }
 
