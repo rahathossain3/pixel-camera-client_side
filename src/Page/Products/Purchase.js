@@ -64,8 +64,8 @@ const Purchase = () => {
         })
             .then(res => res.json())
             .then(result => {
-                navigate('/home');
                 toast('Product Add successfully');
+                navigate('/home');
             })
 
     }
