@@ -11,7 +11,26 @@ const MyPortfolio = () => {
                         <p className="text-5xl font-bold py-6">Frontend Developer</p>
                         <button className="btn btn-primary">Hire me</button>
                     </div>
+
                 </div>
+            </div>
+            <div className='pt-5 m-1'>
+                <h2 className="text-3xl text-center font-bold">
+                    My last 3 live project link
+                </h2>
+                <br />
+                <div className='flex lg:flex-row sm:flex-col justify-between  mx-16 px-24'>
+                    <h2 className="text-3xl font-bold">
+                        <a href="https://laptops-world-review.netlify.app/" target='blank'>Project 1 </a>
+                    </h2>
+                    <h2 className="text-3xl font-bold">
+                        <a href="https://laptop-warehouse-aad91.web.app/" target='blank'>Project 2 </a>
+                    </h2>
+                    <h2 className="text-3xl font-bold">
+                        <a href="https://md-rahat-photography.web.app/" target='blank'>Project 3 </a>
+                    </h2>
+                </div>
+
             </div>
 
             <div>

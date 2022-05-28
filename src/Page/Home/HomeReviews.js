@@ -5,7 +5,7 @@ import Review from '../Reviews/Review';
 
 
 const HomeReviews = () => {
-    const [reviews, setReviews] = useReviews();
+    const [reviews] = useReviews();
 
     return (
         <div className='mt-10 pt-5 '>
