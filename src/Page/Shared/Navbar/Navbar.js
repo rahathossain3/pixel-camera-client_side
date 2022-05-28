@@ -12,6 +12,8 @@ const Navbar = () => {
 
     const logout = () => {
         signOut(auth);
+        // for remove jwt
+        localStorage.removeItem('accessToken');
     };
 
     //menu items

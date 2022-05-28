@@ -6,6 +6,7 @@ import { useForm } from "react-hook-form";
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Loading from '../Shared/Loading/Loading';
 import { toast } from 'react-toastify';
+import useToken from '../../hooks/useToken.js';
 
 const Login = () => {
     //google signing
@@ -21,6 +22,9 @@ const Login = () => {
         loading,
         error,
     ] = useSignInWithEmailAndPassword(auth);
+
+    // jwt token
+    const [token] = useToken(user || gUser);
 
     // for reset password
     const [
@@ -39,11 +43,11 @@ const Login = () => {
     let from = location.state?.from?.pathname || "/";
 
     useEffect(() => {
-        if (user || gUser) {
+        if (token) {
             navigate(from, { replace: true });
-            console.log(user || gUser);
+            // console.log(user || gUser);
         }
-    }, [user, gUser, from, navigate])
+    }, [token, from, navigate])
 
     //ifLoading 
     if (loading || gLoading) {
@@ -63,7 +67,6 @@ const Login = () => {
     }
 
     // for password send
-
     const handlePassReset = async (e) => {
         const email = emailRef.current.value;
         // console.log(email)
