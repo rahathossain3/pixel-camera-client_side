@@ -13,8 +13,8 @@ const ProductRow = ({ product, index, refetch, setDeletingProduct }) => {
     return (
         <tr>
             <th>{index + 1}</th>
-            <td> <div class="avatar">
-                <div class="w-16 rounded">
+            <td> <div className="avatar">
+                <div className="w-16 rounded">
                     <img src={img} alt={name} />
                 </div>
             </div></td>
@@ -22,14 +22,14 @@ const ProductRow = ({ product, index, refetch, setDeletingProduct }) => {
                 <span title={name}> {name.slice(0, 30)}</span>
             </td>
             <td>
-                <span class=" text-md font-bold text-green-900 ">Minimum: </span>{minimumQuality}
+                <span className=" text-md font-bold text-green-900 ">Minimum: </span>{minimumQuality}
                 <hr />
-                <span class=" text-md font-bold text-green-900 ">Available: </span>{availableQuality}
+                <span className=" text-md font-bold text-green-900 ">Available: </span>{availableQuality}
             </td>
 
             <td>{unitPrice}</td>
             <td>
-                <label onClick={() => setDeletingProduct(product)} htmlFor="delete-confirm-modal" class="btn btn-error btn-xs">Delete</label>
+                <label onClick={() => setDeletingProduct(product)} htmlFor="delete-confirm-modal" className="btn btn-error btn-xs">Delete</label>
             </td>
             <td>{email}</td>
         </tr>

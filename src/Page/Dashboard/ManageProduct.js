@@ -20,7 +20,7 @@ const ManageProduct = () => {
     if (isLoading) {
         return <Loading />
     }
-
+    console.log(deletingProduct)
     return (
         <div className='container text-center pt-4'>
 
@@ -30,8 +30,8 @@ const ManageProduct = () => {
 
             <h2 className="text-2xl">Manage Doctor: {products.length}</h2>
 
-            <div class="overflow-x-auto">
-                <table class="table w-full">
+            <div className="overflow-x-auto">
+                <table className="table w-full">
                     {/* <!-- head --> */}
                     <thead>
                         <tr>
@@ -59,6 +59,7 @@ const ManageProduct = () => {
                 </table>
             </div>
             {deletingProduct && <DeleteConfirmModal
+                key={deletingProduct?._id}
                 deletingProduct={deletingProduct}
                 refetch={refetch}
                 setDeletingDoctor={setDeletingProduct}
