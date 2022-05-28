@@ -9,7 +9,7 @@ const MyProfile = () => {
     return (
         <div className='lg:px-18'>
             <hr />
-            <h2 className='text-3xl mt-5 mb-4 text-center mt-3'>User Profile</h2>
+            <h2 className='text-3xl mt-5 mb-4 text-center '>User Profile</h2>
             <hr />
             <div class="card card-side bg-base-100 p-5 shadow-xl">
                 <figure>
@@ -22,9 +22,7 @@ const MyProfile = () => {
                     <h2 class="card-title">{user?.displayName}</h2>
                     <p>Email: {user?.email}.</p>
                     <p>Phone Number: {user?.phoneNumber}.</p>
-                    <div class="card-actions justify-end">
-                        <button class="btn btn-primary">Watch</button>
-                    </div>
+
                 </div>
             </div>
 
