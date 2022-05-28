@@ -5,7 +5,7 @@ import auth from '../../firebase.init';
 const MyProfile = () => {
     const [user] = useAuthState(auth);
 
-    console.log(user);
+    //  console.log(user);
     return (
         <div className='lg:px-18'>
             <hr />

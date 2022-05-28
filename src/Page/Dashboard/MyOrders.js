@@ -23,7 +23,7 @@ const MyOrders = () => {
                 }
             })
                 .then(res => {
-                    console.log('res', res);
+                    //  console.log('res', res);
                     if (res.status === 401 || res.status === 403) {
                         signOut(auth);
                         // for remove jwt
@@ -67,7 +67,7 @@ const MyOrders = () => {
                             order.map((a, index) => <tr
                                 key={a._id}
                             >
-                                {console.log(a)}
+                                {/* {console.log(a)} */}
 
                                 <th>{index + 1}</th>
                                 <td> <div className="avatar">

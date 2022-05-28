@@ -50,7 +50,7 @@ const Purchase = () => {
                })
                    .then(res => res.json())
                    .then(data => {
-                       console.log('data inside use token', data);
+                     //  console.log('data inside use token', data);
                    })
         */
         // -------------------
