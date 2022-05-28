@@ -1,7 +1,12 @@
+import { signOut } from "firebase/auth";
 import { useEffect, useState } from "react"
+import { useNavigate } from "react-router-dom";
+import { toast } from 'react-toastify';
+import auth from "../firebase.init";
 
 const useToken = user => {
     const [token, setToken] = useState('');
+    const navigate = useNavigate();
 
     useEffect(() => {
         const email = user?.user?.email;
@@ -16,6 +21,15 @@ const useToken = user => {
                 body: JSON.stringify(currentUser)
             })
                 .then(res => res.json())
+
+                /*     .then(res => {
+                        if (res.status === 403) {
+                            signOut(auth)
+                            navigate('/home');
+                        }
+                        return res.json()
+                    })
+     */
                 .then(data => {
                     console.log('data inside use token', data);
                     //when get token
