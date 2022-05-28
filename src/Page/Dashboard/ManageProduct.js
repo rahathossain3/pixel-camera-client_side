@@ -22,7 +22,7 @@ const ManageProduct = () => {
     }
     // console.log(deletingProduct)
     return (
-        <div className='container text-center pt-4'>
+        <div className='container text-center  pt-4'>
 
 
             <hr />
@@ -33,12 +33,14 @@ const ManageProduct = () => {
             <div className="overflow-x-auto">
                 <table className="table w-full">
                     {/* <!-- head --> */}
-                    <thead>
+                    <thead className='font-semibold'>
                         <tr>
                             <th></th>
-                            <th>Avatar</th>
-                            <th>Name</th>
-                            <th>Minimum quantity/Available quantity </th>
+                            <th>Image</th>
+                            <th>Product Name</th>
+                            <th>Minimum quantity
+                                <hr className='bg-dark !container' /><br />
+                                Available quantity </th>
                             <th>Product Price $</th>
                             <th>Action</th>
                             <th>Supplier Email</th>

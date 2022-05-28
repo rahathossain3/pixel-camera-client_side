@@ -18,6 +18,7 @@ import AllUsers from './Page/Dashboard/AllUsers';
 import AddProduct from './Page/Dashboard/AddProduct';
 import ManageProduct from './Page/Dashboard/ManageProduct';
 import Purchase from './Page/Products/Purchase';
+import RequireAdmin from './Page/Login/RequireAdmin';
 
 function App() {
   return (
@@ -35,9 +36,9 @@ function App() {
         <Route path='/registration' element={<Registration />}></Route>
 
         <Route path='/dashboard' element={
-          // <RequireAuth>
-          <Dashboard />
-          // </RequireAuth>
+          <RequireAuth>
+            <Dashboard />
+          </RequireAuth>
         }></Route>
 
         {/* nested route */}
@@ -45,9 +46,23 @@ function App() {
           {/* 1st main route a index hoy, onno sob a path hobe */}
           <Route index element={<MyOrders />}></Route>
           <Route path='myProfile' element={<MyProfile />}></Route>
-          <Route path='users' element={<AllUsers />}></Route>
-          <Route path='addProduct' element={<AddProduct />}></Route>
-          <Route path='manageProduct' element={<ManageProduct />}></Route>
+          <Route path='users' element={
+            <RequireAdmin>
+              <AllUsers />
+            </RequireAdmin>
+          }></Route>
+
+          <Route path='addProduct' element={
+            <RequireAdmin>
+              <AddProduct />
+            </RequireAdmin>
+          }></Route>
+
+          <Route path='manageProduct' element={
+            <RequireAdmin>
+              <ManageProduct />
+            </RequireAdmin>
+          }></Route>
 
         </Route>
         <Route path='/purchase/:itemId' element={<RequireAuth> <Purchase /></RequireAuth>}></Route>

@@ -26,7 +26,7 @@ const AllUsers = () => {
                 <table className="table w-full">
                     <thead>
                         <tr>
-                            <th></th>
+                            <th> Sl. No</th>
                             <th>Name</th>
                             <th>Job</th>
                             <th>Favorite Color</th>
@@ -34,10 +34,11 @@ const AllUsers = () => {
                     </thead>
                     <tbody>
                         {
-                            users.map(user => <UserRow
+                            users.map((user, index) => <UserRow
                                 key={user._id}
                                 user={user}
                                 refetch={refetch}
+                                index={index}
                             ></UserRow>)
                         }
                     </tbody>
