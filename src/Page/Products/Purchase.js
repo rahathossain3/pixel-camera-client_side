@@ -62,7 +62,7 @@ const Purchase = () => {
                 <div className="hero rounded-md bg-base-200 py-5 lg:px-5">
                     <div className="hero-content flex-col lg:flex-row-reverse">
                         <img src={img} alt={name} className="max-w-sm  sm:w-80% !container rounded-lg shadow-2xl" />
-                        <div>
+                        <div className=''>
                             <h1 className="text-5xl font-bold">{name}</h1>
                             <p className='left-text text-xl text-justify py-6' title={details}>
                                 <span className='font-bold text-orange-600 pb-3'>Details: </span>

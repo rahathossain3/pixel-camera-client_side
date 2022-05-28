@@ -36,7 +36,7 @@ const AddProduct = () => {
 
     return (
         <div className=' w-full lg:p-5 flex justify-center lg:flex-col'>
-            <h2 className='title text-center mt-3'>Add a Product</h2>
+            <h2 className='text-5xl mb-4 text-center mt-3'>Add a Product</h2>
             <hr style={{ color: 'goldenrod', border: '2px solid goldenrod' }} />
 
             <form className='flex flex-col mb-5' onSubmit={handleSubmit(onSubmit)}>
