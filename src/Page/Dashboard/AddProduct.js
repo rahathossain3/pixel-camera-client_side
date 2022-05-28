@@ -15,7 +15,7 @@ const AddProduct = () => {
 
     const onSubmit = async (data) => {
         console.log(data);
-        const url = `http://localhost:5000/product`;
+        const url = `https://safe-fjord-32249.herokuapp.com/product`;
         fetch(url, {
             method: 'POST',
             headers: {

@@ -5,7 +5,7 @@ const useItemDetail = itemId => {
 
     useEffect(() => {
         //get single item url
-        const url = `http://localhost:5000/product/${itemId}`;
+        const url = `https://safe-fjord-32249.herokuapp.com/product/${itemId}`;
 
         fetch(url)
             .then(res => res.json())

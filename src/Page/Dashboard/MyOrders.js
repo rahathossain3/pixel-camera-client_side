@@ -15,7 +15,7 @@ const MyOrders = () => {
 
     useEffect(() => {
         if (user) {
-            fetch(`http://localhost:5000/order?product=${user.email}`, {
+            fetch(`https://safe-fjord-32249.herokuapp.com/order?product=${user.email}`, {
                 method: 'GET',
                 headers: {
                     //send jwt token
@@ -43,8 +43,8 @@ const MyOrders = () => {
     return (
         <div>
             <h2 className='font-semibold p-5 '>My Order : {order.length}</h2>
-            <div class="overflow-x-auto">
-                <table class="table w-full">
+            <div className="overflow-x-auto">
+                <table className="table w-full">
                     {/* <!-- head --> */}
                     <thead>
                         <tr>

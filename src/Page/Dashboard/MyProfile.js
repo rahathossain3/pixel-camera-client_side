@@ -11,15 +11,15 @@ const MyProfile = () => {
             <hr />
             <h2 className='text-3xl mt-5 mb-4 text-center '>User Profile</h2>
             <hr />
-            <div class="card card-side bg-base-100 p-5 shadow-xl">
+            <div className="card card-side bg-base-100 p-5 shadow-xl">
                 <figure>
-                    <div class=" avatar online w-28 placeholder">
-                        <div class="bg-neutral-focus text-neutral-content rounded-full w-24">
+                    <div className=" avatar online w-28 placeholder">
+                        <div className="bg-neutral-focus text-neutral-content rounded-full w-24">
                             <img src={user?.photoURL} alt="" />
                         </div>
                     </div> </figure>
-                <div class="card-body font-semibold">
-                    <h2 class="card-title">{user?.displayName}</h2>
+                <div className="card-body font-semibold">
+                    <h2 className="card-title">{user?.displayName}</h2>
                     <p>Email: {user?.email}.</p>
                     <p>Phone Number: {user?.phoneNumber}.</p>
 

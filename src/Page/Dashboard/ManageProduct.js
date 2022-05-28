@@ -11,7 +11,7 @@ const ManageProduct = () => {
     const [deletingProduct, setDeletingProduct] = useState('');
 
     //react query 
-    const { data: products, isLoading, refetch } = useQuery('products', () => fetch('http://localhost:5000/product', {
+    const { data: products, isLoading, refetch } = useQuery('products', () => fetch('https://safe-fjord-32249.herokuapp.com/product', {
         // headers: {
         //     authorization: `Bearer ${localStorage.getItem('accessToken')}`
         // }

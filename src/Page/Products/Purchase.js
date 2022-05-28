@@ -41,7 +41,7 @@ const Purchase = () => {
         // console.log(order);
         // console.log(currentUser);
 
-        /*        fetch(`http://localhost:5000/order/${id}`, {
+        /*        fetch(`https://safe-fjord-32249.herokuapp.com/order/${id}`, {
                    method: 'POST',
                    headers: {
                        'content-type': 'application/json'
@@ -54,7 +54,7 @@ const Purchase = () => {
                    })
         */
         // -------------------
-        const url = `http://localhost:5000/order`;
+        const url = `https://safe-fjord-32249.herokuapp.com/order`;
         fetch(url, {
             method: 'PUT',
             headers: {
