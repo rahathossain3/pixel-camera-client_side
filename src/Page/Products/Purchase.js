@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import auth from '../../firebase.init';
 import useProductDetails from '../../hooks/useProductDetails';
+import { toast } from 'react-toastify';
 
 const Purchase = () => {
 
@@ -13,6 +14,7 @@ const Purchase = () => {
     const [quantity, setQuantity] = useState(0);
 
     const [user] = useAuthState(auth);
+    let navigate = useNavigate();
     // console.log(user)
     // const { register, handleSubmit } = useForm();
     // const onSubmit = data => console.log(data);
@@ -27,9 +29,53 @@ const Purchase = () => {
         // const minQnt = parseInt(minimumQnt);
     }
 
+
+    // restock item quantity------------------
+    const handleOrder = event => {
+        const bEmail = user.email;
+        // console.log(bEmail);
+        const order = { ...product, bEmail }
+
+        const id = _id;
+        const currentUser = order;
+        console.log(order);
+        console.log(currentUser);
+
+        fetch(`http://localhost:5000/order/${id}`, {
+            method: 'PUT',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(currentUser)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log('data inside use token', data);
+            })
+
+        /*    // -------------------
+           const url = `http://localhost:5000/order`;
+           fetch(url, {
+               method: 'PUT',
+               headers: {
+                   'content-type': 'application/json'
+               },
+               body: JSON.stringify(order)
+           })
+               .then(res => res.json())
+               .then(result => {
+   
+                   navigate('/home');
+                   toast('Product Add successfully');
+               }) */
+
+    }
+
+
+
     if (quantity >= minimumQnt && quantity <= availableQnt) {
 
-        buttonDisable = <button className="btn btn-primary w-3/5">Purchase</button>
+        buttonDisable = <button onClick={handleOrder} className="btn btn-primary w-3/5">Purchase</button>
         // console.log('ok');
     }
     else {

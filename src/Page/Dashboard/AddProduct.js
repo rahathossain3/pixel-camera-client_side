@@ -14,7 +14,7 @@ const AddProduct = () => {
 
 
     const onSubmit = async (data) => {
-        // console.log(data);
+        console.log(data);
         const url = `http://localhost:5000/product`;
         fetch(url, {
             method: 'POST',
