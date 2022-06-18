@@ -1,12 +1,27 @@
 # WELCOME to Pixel Camera Manufacture Side
 
-* ## client side git repo link
+### Live Webside  link
 
-    https://github.com/programming-hero-web-course1/manufacturer-website-client-side-rahathossain3
+[Live side] (https://pixel-camera-c8298.web.app/)
+   
 
-* ## server side git repo link
+- - - -
+### client side git repo link
 
-    https://github.com/programming-hero-web-course1/manufacturer-website-server-side-rahathossain3
+[Client side] (https://github.com/rahathossain3/pixel-camera-client_side)
+   
+    https://github.com/rahathossain3/pixel-camera-client_side
+
+- - - - 
+
+ ### server side git repo link
+ 
+[Server side] (https://github.com/rahathossain3/pixel-camera-server_side)
+   
+    https://github.com/rahathossain3/pixel-camera-server_side
+
+- - - -
+
 
 
 ### using 
